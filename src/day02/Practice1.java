@@ -2,9 +2,9 @@ package day02;
 
 import java.util.Scanner;
 
-public class Practice1 { // class s 
+public class Practice1 { 
 
-    public static void main(String[] args) { // main s 
+    public static void main(String[] args) { 
 
         // 1. so+엔터 : println함수 
         System.out.println( 25 ); System.out.println("홍길동" );
@@ -54,8 +54,7 @@ public class Practice1 { // class s
         System.out.print("성별을 입력하세요(남/여): "); char 성별 = scan.next().charAt(0);
         System.out.printf("입력하신 성별은 %s 입니다. \n" , 성별 );
 
-        // 11. 직접 풀기 
-
+        // 11.
 
     }  
 }
