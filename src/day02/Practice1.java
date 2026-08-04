@@ -55,6 +55,7 @@ public class Practice1 {
         System.out.printf("입력하신 성별은 %s 입니다. \n" , 성별 );
 
         // 11.
+        
 
     }  
 }
