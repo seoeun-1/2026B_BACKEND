@@ -55,10 +55,6 @@ public class Practice1 {
         System.out.printf("입력하신 성별은 %s 입니다. \n" , 성별 );
 
         // 11.
-        System.out.print("이름: "); String 이름 = scan.nextLine();
-        System.out.print("나이: "); int 나이 = scan.nextInt();
-        System.out.print("키: "); double 키 = scan.nextDouble();
-        System.out.print("프로그래머입니까? (true/false): "); boolean 프로그래머 = scan.nextBoolean();
 
     }  
 }
