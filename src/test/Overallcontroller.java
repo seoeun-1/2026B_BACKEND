@@ -102,20 +102,3 @@ class 의류{
     }
 }
 
-/* 
-class 의류별세탁법 {
-    int 의류ID;
-    String 물온도;
-    String 세탁방법;
-    String 권장세제;
-    String 주의사항;
-}
-
-class 의류{
-    int 의류ID;
-    String 의류명;
-    int 카테고리ID;
-    int 소재ID;
-    String 이미지경로;
-}
-*/
