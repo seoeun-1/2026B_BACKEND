@@ -36,7 +36,7 @@ class Book{
         this.price = price;
     }
     // 3. 메소드 
-}
+}    
 
 /*[문제 3] BankAccount 클래스 (다양한 데이터 타입을 가진 생성자)
 
