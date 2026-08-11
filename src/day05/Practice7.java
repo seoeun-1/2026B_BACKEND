@@ -1,5 +1,7 @@
 package day05;
 
+import java.util.Scanner;
+
 public class Practice7 {
     public static void main(String[] args) {
         // [1] 1.객체 생성, new 생성자명();  또는  타입 변수명 = new 생성자명();
@@ -40,7 +42,98 @@ public class Practice7 {
         else{ System.out.println( prod2.name); }
         
         // [6]
-        
+        Member member = new Member();
+
+        member.id = "admin";
+        member.isLogin = false;
+
+        System.out.println("로그인 전 상태: " + member.isLogin);
+        member.isLogin = true;
+
+        System.out.println("로그인 후 상태: " + member.isLogin);
+
+        // [7]
+        Television television = new Television();
+
+        television.channel = 7;
+        television.volume = 20;
+        television.channel = 11;
+        television.volume = television.volume - 2;
+
+        System.out.println("채널: " + television.channel);
+        System.out.println("볼륨: " + television.volume);
+
+        // [8]
+        Player player1 = new Player();
+        Player player2 = new Player();
+
+        player1.name = "손흥민";
+        player1.power = 90;
+        player1.speed = 95;
+
+        player2.name = "이강인";
+        player2.power = 85;
+        player2.speed = 92;
+
+        int total1 = player1.power + player1.speed;
+        int total2 = player2.power + player2.speed;
+
+        System.out.println(player1.name + " 총점: " + total1);
+        System.out.println(player2.name + " 총점: " + total2);
+
+        if (total1 > total2) {
+            System.out.println("더 높은 선수: " + player1.name);
+        } else if (total2 > total1) {
+            System.out.println("더 높은 선수: " + player2.name);
+        } else {
+            System.out.println("두 선수의 점수가 같습니다.");
+        }
+
+        // [9]
+        MenuItem menu1 = new MenuItem();
+        MenuItem menu2 = new MenuItem();
+        MenuItem menu3 = new MenuItem();
+
+        menu1.name = "김치찌개";
+        menu1.price = 8000;
+        menu1.isSignature = true;
+
+        menu2.name = "된장찌개";
+        menu2.price = 8000;
+        menu2.isSignature = false;
+
+        menu3.name = "계란찜";
+        menu3.price = 3000;
+        menu3.isSignature = false;
+
+        if (menu1.isSignature == true) {
+            System.out.println("[대표메뉴] " + menu1.name + " : " + menu1.price + "원");
+        }
+        if (menu2.isSignature == true) {
+            System.out.println("[대표메뉴] " + menu2.name + " : " + menu2.price + "원");
+        }
+        if (menu3.isSignature == true) {
+            System.out.println("[대표메뉴] " + menu3.name + " : " + menu3.price + "원");
+        }
+
+        // [10]
+        Scanner scan = new Scanner(System.in);
+        UserProfile user = new UserProfile();
+
+        System.out.print("이름을 입력하세요: ");
+        user.name = scan.nextLine();
+        System.out.print("나이를 입력하세요: ");
+        user.age = scan.nextInt();
+        scan.nextLine();
+        System.out.print("MBTI를 입력하세요: ");
+        user.mbti = scan.nextLine();
+
+        System.out.println("--- 프로필 ---");
+        System.out.println("이름: " + user.name);
+        System.out.println("나이: " + user.age);
+        System.out.println("MBTI: " + user.mbti);
+
+        scan.close();
     }
 }
 
@@ -77,29 +170,30 @@ class Product{
     int price;
 }
 // [6]
-
-
-/*[문제 6] Member 클래스를 만드세요. id(문자열)와 isLogin(boolean) 멤버 변수를 가집니다.
-1. main 함수에서 Member 객체를 하나 생성하고, 아이디는 "admin", isLogin은 false로 초기화하세요.
-2. "로그인 전 상태: [isLogin 값]"을 출력하세요.
-3. 객체의 isLogin 값을 true로 변경하여 로그인 상황을 구현하세요.
-4. "로그인 후 상태: [isLogin 값]"을 출력하세요.*/
-
-/*[문제 7] Television 클래스를 만드세요. channel(정수)과 volume(정수) 멤버 변수를 가집니다.
-1. main 함수에서 Television 객체를 생성하고, channel은 7, volume은 20으로 초기화하세요.
-2. 객체의 channel 값을 11로 변경하고, volume 값은 2 감소시킨 뒤, 변경된 채널과 볼륨을 출력하세요.*/
-
-/*[문제 8] Player 클래스를 만드세요. name(문자열), power(정수), speed(정수) 멤버 변수를 가집니다.
-1. main 함수에서 Player 객체 2개를 생성하세요.
-2. 첫 번째 객체에는 "손흥민", 90, 95를, 두 번째 객체에는 "이강인", 85, 92를 각각 저장하세요.
-3. 두 객체의 power와 speed의 합을 각각 계산하고, 합이 더 높은 선수의 이름을 출력하세요.*/
-
-/*[문제 9] MenuItem 클래스를 만드세요. name(문자열), price(정수), isSignature(boolean, 대표메뉴 여부) 멤버 변수를 가집니다.
-1. main 함수에서 MenuItem 객체 3개를 생성하고, 첫 번째는 "김치찌개", 8000, true, 두 번째는 "된장찌개", 8000, false, 세 번째는 "계란찜", 3000, false로 저장하세요.
-2. if문을 사용하여 isSignature가 true인 메뉴 객체를 찾아, "[대표메뉴] [메뉴이름] : [가격]원" 형식으로 출력하세요.*/
-
-/*[문제 10] UserProfile 클래스를 만드세요. name(문자열), age(정수), mbti(문자열) 멤버 변수를 가집니다.
-1. main 함수에서 UserProfile 객체를 하나 생성하세요.
-2. Scanner를 사용하여 사용자로부터 이름, 나이, MBTI를 순서대로 입력받으세요.
-3. 입력받은 값들을 생성된 객체의 각 멤버 변수에 저장하세요.
-3. 모든 정보가 저장된 객체의 멤버 변수들을 가져와 "--- 프로필 ---", "이름: [이름]", "나이: [나이]", "MBTI: [MBTI]" 형식으로 출력하세요.*/
+class Member {
+    String id;
+    boolean isLogin;
+}
+// [7]
+class Television {
+    int channel;
+    int volume;
+}
+// [8]
+class Player {
+    String name;
+    int power;
+    int speed;
+}
+// [9]
+class MenuItem {
+    String name;
+    int price;
+    boolean isSignature;
+}
+// [10]
+class UserProfile {
+    String name;
+    int age;
+    String mbti;
+}
