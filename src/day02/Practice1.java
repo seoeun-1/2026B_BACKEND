@@ -55,22 +55,22 @@ public class Practice1 {
         System.out.printf("입력하신 성별은 %s 입니다. \n" , 성별 );
 
         // 11.
+        Scanner scan1 = new Scanner(System.in);
 
+        System.out.print("이름: ");
+        String name1 = scan1.nextLine();
+        System.out.print("나이: ");
+        int age1 = scan1.nextInt();
+        System.out.print("키: ");
+        double height1 = scan1.nextDouble();
+        System.out.print("프로그래머입니까? (true/false): ");
+        boolean programmer = scan1.nextBoolean();
+
+        System.out.println("--- 자기소개 ---");
+        System.out.println("이름: " + name1);
+        System.out.println("나이: " + age1);
+        System.out.println("키: " + height1 + "cm");
+        System.out.println("프로그래머 여부: " + programmer);
     }  
 }
 
-/*
-문제 11: Scanner를 사용하여 아래 4가지 정보를 순서대로 입력받아 출력하는 코드를 작성하시오.
-이름 (String), 나이 (int), 키 (double), 프로그래머 여부 (boolean)
-입력 예시:
-이름: 김자바
-나이: 25
-키: 165.8
-프로그래머입니까? (true/false): true
-출력 예시:
---- 자기소개 ---
-이름: 김자바
-나이: 25
-키: 165.8cm
-프로그래머 여부: true
-*/
