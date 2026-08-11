@@ -1,26 +1,26 @@
 package day10;
-
 public class Exam4 {
     public static void main(String[] args) {
-
-    Car myCar = new Car();
+        
+        Car myCar = new Car();
         myCar.tire = new Tire(); 
-        myCar.run(); 
+        myCar.run();
         myCar.tire = new HankookTire(); 
-        myCar.run(); 
+        myCar.run();
         myCar.tire = new KumhoTire();
         myCar.run(); 
-        System.out.println( myCar.tire instanceof Tire ); // true
-        System.out.println( myCar.tire instanceof KumhoTire ); // true
-        System.out.println( myCar.tire instanceof HankookTire ); // false
-      
+        System.out.println( myCar.tire instanceof Tire ); 
+        System.out.println( myCar.tire instanceof KumhoTire ); 
+        System.out.println( myCar.tire instanceof HankookTire ); 
+
     } // main
 } // class end
-class Car{ // 자동차
+
+class Car{ 
  Tire tire;
  void run() { this.tire.roll(); }
 }
-class Tire{ // 타이어
+class Tire{ 
  void roll(){
  System.out.println("[일반] 타이어가 회전");
  }

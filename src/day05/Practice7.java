@@ -39,6 +39,8 @@ public class Practice7 {
         if( prod1.price > prod2.price ){ System.out.println( prod1.name );}
         else{ System.out.println( prod2.name); }
         
+        // [6]
+        
     }
 }
 
@@ -74,6 +76,7 @@ class Product{
     String name;
     int price;
 }
+// [6]
 
 
 /*[문제 6] Member 클래스를 만드세요. id(문자열)와 isLogin(boolean) 멤버 변수를 가집니다.
