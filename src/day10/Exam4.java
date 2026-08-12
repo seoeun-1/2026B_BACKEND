@@ -16,7 +16,7 @@ public class Exam4 {
     } // main
 } // class end
 
-class Car{ 
+class Car{ //클래스(설계도)는 인스턴스 만들기 
  Tire tire;
  void run() { this.tire.roll(); }
 }
