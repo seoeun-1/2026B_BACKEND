@@ -1,8 +1,17 @@
 package day11;
 
 public class Practice13 {
-    
+    public static void main(String[] args) {
+        // 다형성: 하나의 변수가 여러 타입들의 하나으 자료 저장    *변수는 하나의 자료 저장*
+        //3(int) byte a = 3 , short b = a , long = a; < 다형성 >
+        // 상속(오버라이딩 선택) vs 구현(오버라이딩 필수) 이용한 다형성
+    }
 }
+
+// [1] 인터페이스 상수와 추상케소드() 갖는다.
+
+
+
 /*[문제 1] 기본 인터페이스와 구현
 1. "소리를 냅니다."라는 추상 메소드 makeSound()를 가진 Soundable 인터페이스를 정의하세요.
 2. Soundable 인터페이스를 구현(implements)하는 Cat 클래스와 Dog 클래스를 만드세요.
