@@ -33,9 +33,12 @@ public class Practice11 {
         bookList.add( new Book("책이름1", "저자1") );
         bookList.add( new Book("책이름2", "저자2") );
         bookList.add( new Book("책이름3", "저자3") );
-        for( Book book : bookList ){  System.out.println( book.getTitle() + " : " + book.getAuthor() ); }
+        for( Book book : bookList ){  System.out.println( book.getTitle() + " : " + book.getAuthor() );}
+        // [7]
+        
     } // main end 
 } // class end 
+
 class Book{ 
     private String title;
     private String author;

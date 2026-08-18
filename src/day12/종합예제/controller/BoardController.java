@@ -1,5 +1,7 @@
 package day12.종합예제.controller;
 
+import java.util.ArrayList;
+
 import day12.종합예제.model.dao.BoardDao;
 import day12.종합예제.model.dto.BoardDto;
 
@@ -12,7 +14,25 @@ public class BoardController {
 
     // [1] 등록 Controller
     public boolean save( BoardDto boardDto ){
-        boolean result = bd.save( boardDto );
+        boolean result = bd.save( boardDto ); // view에게 전달받은 매개변수을 dao에게전달
+        return result; // dao에게 받은 결과을 view 반환
+    }
+
+    // [2] 전체조회 Controller 
+    public ArrayList<BoardDto> findAll( ){
+        ArrayList<BoardDto> result = bd.findAll();
         return result;
     }
-}
+
+    // [3] 개별수정 Controller 
+    public boolean update( BoardDto boardDto ){
+        return bd.update( boardDto );
+    }
+    
+    // [4] 개별삭제 Controller
+    public boolean delete( int no ){
+        return bd.delete( no );
+    }
+
+} // class end 
+
