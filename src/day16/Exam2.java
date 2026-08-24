@@ -43,7 +43,7 @@ public class Exam2 {
                     int 대기중인스레드수 = poolExecutor.getCorePoolSize() - 작업중인스레드수;
                     int 대기중인요청수 = poolExecutor.getQueue().size();
                     System.out.println("작업중인 스레드수" + 작업중인스레드수);
-                    System.out.println("작업중인 스레드수" + 대기중인스레드수);
+                    System.out.println("대기중인 스레드수" + 대기중인스레드수);
                     System.out.println("대기중인 요청수" + 대기중인요청수);
                 }
                 //[4] 20개 배정후 스레드풀 종료 에약(모든 작업이 끝나면)
